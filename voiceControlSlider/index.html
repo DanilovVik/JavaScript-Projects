@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер с голосовым управлением</title>
+    <!-- шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- библиотека для распознавания текста -->
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <!-- заголовок -->
+        <h1 class="title">Слайдер с голосовым управлением</h1>
+        <!-- гайд - инструкция -->
+        <p class="guide">1. Используйте кнопки или стрелки для смены слайдов. <br> 2. Нажмите на кнопку "Читать" <br> для распознавания и чтения текста. <br> 3. Включите звук. <br> Голосовые команды: <br> "вперед" - следующий слайд, <br> "назад" - предыдущий слайд, <br> "читать" - распознавание текста и чтение слайда, <br> "стоп" - отключение микрофона. <br> 4. Во избежание повторного распознавания, <br> текст сохраняется в локальном хранилище.</p>
+
+        <!-- слайдер -->
+        <div class="slider-box"></div>
+
+        <!-- кнопки -->
+        <div class="btn-box">
+            <button class="btn-sound">звук</button>
+            <button class="btn-read">читать</button>
+            <button class="btn-guide">гайд</button>
+        </div>
+    </main>
+
+    <!-- лоадер -->
+    <div class="loader"></div>
+</body>
+
+</html>
