@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Text - jQuery</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(circle, #333, #111);
+        }
+
+        #text {
+            padding: 0.5em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: monospace;
+            font-size: 2.4em;
+            letter-spacing: 2px;
+            color: #0f0;
+            text-shadow: 0 0 4px green;
+            opacity: 0.8;
+            user-select: none;
+        }
+
+        #text::after {
+            content: "_";
+            opacity: 0;
+            animation: cursor 0.5s infinite alternate;
+        }
+
+        @keyframes cursor {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 0.8;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+
+<body>
+    <p id="text">
+        <span>
+            <noscript>Forever trusting who we are and nothing else matters!</noscript>
+        </span>
+    </p>
+
+    <script>
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function typeText(p) {
+            $("#" + p).addClass("cursor");
+            let text = $("#" + p).text(),
+                randInt = 0;
+            for (let i = 0; i < text.length; i++) {
+                randInt += parseInt(randomInt(40, 300));
+                let typing = setTimeout(
+                    function (y) {
+                        $("#" + p).append(text.charAt(y));
+                    },
+                    randInt,
+                    i
+                );
+            }
+        }
+
+        $(document).ready(function () {
+            typeText("text");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date&Time - jQuery</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Montserrat, sans-serif;
+            text-align: center;
+        }
+
+        #clock {
+            color: #0ff;
+            text-shadow: 0 0 4px #0ff;
+            opacity: 0.9;
+        }
+
+        #date {
+            font-size: 2.6em;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 4em;
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        #point {
+            animation: move 1s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 1;
+                text-shadow: 0 0 20px #0ff;
+            }
+
+            50% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 20px #0ff;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+
+<body>
+    <div id="clock">
+        <div id="date"></div>
+        <ul>
+            <li id="hours"></li>
+            <li id="point">:</li>
+            <li id="mins"></li>
+            <li id="point">:</li>
+            <li id="secs"></li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            let month = [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                day = [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday :)",
+                    "Saturday"
+                ],
+                date = new Date();
+
+            date.setDate(date.getDate());
+
+            $("#date").html(`${day[date.getDay()]}<br>${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`);
+
+            setInterval(() => {
+                let secs = new Date().getSeconds();
+                $("#secs").html(`${secs < 10 ? "0" : ""}${secs}`);
+            }, 1000);
+
+            setInterval(() => {
+                let mins = new Date().getMinutes();
+                $("#mins").html(`${mins < 10 ? "0" : ""}${mins}`);
+            }, 1000);
+            
+            setInterval(() => {
+                let hours = new Date().getHours();
+                $("#hours").html(`${hours < 10 ? "0" : ""}${hours}`);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
