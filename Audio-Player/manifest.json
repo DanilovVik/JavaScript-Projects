@@ -1,0 +1,33 @@
+{
+    "name": "Audio Player",
+    "short_name": "Audio Player",
+    "start_url": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#eee",
+    "theme_color": "#111",
+    "description": "Multiminimal Web Audio Player",
+    "icons": [{
+        "src": "./img/icons/64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/icons/128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/icons/256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/icons/512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "serviceworker": {
+      "src": "./sw.js"
+    }
+  }
