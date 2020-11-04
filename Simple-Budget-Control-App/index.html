@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Igor Agapov">
+    <meta name="description" content="Simple Budget Control App">
+    <meta name="theme-color" content="steelblue">
+
+    <!-- facebook -->
+    <meta property="og:type" content="website">
+	<meta property="og:url" content="https://harryheman.github.io/budgetPWA/index.html">
+	<meta property="og:title" content="Budget">
+	<meta property="og:image" content="./img/icons/icon-256.png">
+	<meta property="og:description" content="Simple Budget Control App">
+    <meta property="og:locale" content="en_US">
+
+    <!-- twitter -->
+	<meta name="twitter:title" content="Budget">
+	<meta name="twitter:description" content="Simple Budget Control App">
+	<meta name="twitter:image" content="./img/icons/icon-128.png">
+    
+    <!-- apple -->
+    <meta name="apple-mobile-web-app-title" content="Budget">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="steelblue">
+    <link rel="apple-touch-icon" href="./img/icons/icon-256.png">
+
+    <meta itemprop="name" content="Budget">
+	<meta itemprop="description" content="Simple Budget Control App">
+	<meta itemprop="image" content="./img/icons/icon-128.png">
+    
+    <link rel="icon" href="./img/icons/icon-64.png">
+
+    <link rel="manifest" href="./manifest.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-box">
+        <form class="budget-form">
+            <label>
+                Enter your budget
+                <input type="number" min="0" step="1" class="budget-amount">
+                <button type="submit">Add budget</button>
+            </label>
+        </form>
+
+        <div class="info-box" tabindex="0">
+            <div class="info-item">
+                <p>Budget</p>
+                <img src="img/buttons/money-bill-alt-solid.svg" alt="budget">
+                <p><span class="info-budget">0</span> <span>₽</span></p>
+            </div>
+            <div class="info-item">
+                <p>Exprenses</p>
+                <img src="img/buttons/money-bill-solid.svg" alt="expense">
+                <p><span class="info-expense">0</span> <span>₽</span></p>
+            </div>
+            <div class="info-item">
+                <p>Balance</p>
+                <img src="img/buttons/dollar-sign-solid.svg" alt="balance">
+                <p><span class="info-balance">0</span> <span>₽</span></p>
+            </div>
+        </div>
+
+        <form class="expense-form">
+            <label for="expense-title">Enter expense title</label>
+            <input type="text" class="expense-title" id="expense-title">
+            <label for="expense-amount">Enter expense amount</label>
+            <input type="number" step="1" class="expense-amount" id="expense-amount">
+            <button type="submit">Add expense</button>
+        </form>
+
+        <div class="list-box" tabindex="0">
+            <ul class="list-item">
+                <li>Date</li>
+                <li>Title</li>
+                <li>Amount</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, skyblue, steelblue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Comfortaa, cursive;
+    font-size: 1.1em;
+    text-align: center;
+    color: #222;
+    user-select: none;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: .9em;
+    }
+}
+
+.app-box {
+    margin: 1em;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-box > div,
+form {
+    width: 100%;
+    margin-bottom: .4em;
+    padding: 1em;
+    background: linear-gradient(lightgreen, darkgreen);
+    border-radius: 6px;
+}
+
+.budget-form,
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box,
+.list-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.list-item {
+    margin: .5em 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: .9em;
+}
+
+.info-box img {
+    margin: .4em 0;
+    width: 35px;
+}
+
+.info-box img:last-of-type {
+    height: 25px;
+}
+
+.list-item img {
+    margin: 0 .5em;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+input {
+    margin: .8em 0;
+    width: 90%;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-family: inherit;
+    font-size: .8em;
+    letter-spacing: 1.2px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: .6em .8em;
+    background: linear-gradient(lightyellow, darkorange);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: .8em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+}

@@ -1,0 +1,71 @@
+@import './buttons.min.css';
+@import './equal.min.css';
+@import './progress.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+.player-box {
+    padding: .5em;
+    width: 320px;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:
+        1px -1px 1px steelblue inset,
+        -1px 1px 1px skyblue inset;
+    border-radius: 4px;
+}
+
+.player-box div {
+    display: inherit;
+    justify-content: space-around;
+    align-items: center;
+    margin: .25em 0;
+}
+
+.absolute-position {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.track-list {
+    padding: .5em;
+    width: 320px;
+    box-shadow:
+        1px -1px 1px steelblue inset,
+        -1px 1px 1px skyblue inset;
+    border-radius: 4px;
+    display: none;
+}
+
+figure {
+    margin: .6em .2em;
+    padding: .2em;
+    cursor: pointer;
+}
+
+figcaption {
+    font-size: .9em;
+}
+
+.checked {
+    box-shadow: 0 1px 1px steelblue;
+    border-radius: 2px;
+}
