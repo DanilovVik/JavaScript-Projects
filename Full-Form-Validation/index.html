@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Client</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="container">
+    <h1 class="title">Form Validation</h1>
+    <form>
+      <!-- name -->
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Igor"
+            minlength="2"
+            maxlength="10"
+            required
+          /></div>
+      </div>
+
+      <!-- age -->
+      <div class="form-group row">
+        <label for="age" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            placeholder="30"
+            min="18"
+            max="100"
+            step="1"
+            required
+          /></div>
+      </div>
+
+      <!-- phone -->
+      <div class="form-group row">
+        <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="+79876543210"
+            required
+          /></div>
+      </div>
+
+      <!-- password -->
+      <div class="form-group row">
+        <label for="password" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="p@sSw0rd"
+            minlength="8"
+            maxlength="12"
+            required
+          /></div>
+      </div>
+
+      <!-- email -->
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="email@example.com"
+            required
+          /></div>
+      </div>
+
+      <!-- site -->
+      <div class="form-group row">
+        <label for="url" class="col-sm-2 col-form-label">Site</label>
+        <div class="col-sm-10">
+          <input
+            type="url"
+            class="form-control"
+            id="url"
+            placeholder="https://whatever.org"
+            required
+          /></div>
+      </div>
+
+      <!-- card -->
+      <div class="form-group row">
+        <label for="card" class="col-sm-2 col-form-label">Card</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            id="card"
+            placeholder="1111222233334444"
+            minlength="16"
+            maxlength="16"
+            required
+          /></div>
+      </div>
+
+      <!-- date -->
+      <div class="form-group row">
+        <label for="date" class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-10">
+          <input type="date"
+          class="form-control"
+          id="date"
+          required /></div>
+      </div>
+
+      <!-- time -->
+      <div class="form-group row">
+        <label for="time" class="col-sm-2 col-form-label">Time</label>
+        <div class="col-sm-10">
+          <span id="tooltip">10:00-12:00</span>
+          <input
+            type="range"
+            class="form-control"
+            id="time"
+            min="10"
+            max="18"
+            step="0.5"
+            value="10"
+            required/></div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-8">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="send"
+            disabled
+          >
+            Send
+          </button>
+          <button
+            type="reset"
+            class="btn btn-warning"
+          >
+            Clear
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            id="set"
+          >
+            Data
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="src/script.js" type="module"></script>
+  </body>
+</html>

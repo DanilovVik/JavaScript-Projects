@@ -1,0 +1,6 @@
+git init
+heroku git:remote -a form-validation-server
+
+git add .
+git commit -am "message"
+git push heroku master

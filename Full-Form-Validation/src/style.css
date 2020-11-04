@@ -1,0 +1,21 @@
+.container {
+  max-width: 512px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#tooltip {
+  display: block;
+  text-align: center;
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
